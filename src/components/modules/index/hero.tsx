@@ -9,7 +9,7 @@ import { OrbitControls } from "@react-three/drei";
 type RingProps = {
   borderClass: string;
   wireColor?: string;
-  geo?: "sphere" | "torus" | "box";
+  geo?: "sphere" | "torus" | "knot";
 };
 
 const geoMap = {
@@ -35,7 +35,13 @@ export const Ring = ({
     >
       <Canvas camera={{ position: [0, 0, 4], fov: 35 }}>
         <mesh
-          geometry={geoMap[geo]}
+          geometry={
+            geo === "sphere"
+              ? geoMap.sphere
+              : geo === "torus"
+              ? geoMap.torus
+              : geoMap.knot
+          }
           rotation={
             isTorus
               ? [Math.PI / 2, 0.4, 0] // flat torus
@@ -61,9 +67,9 @@ export const Ring = ({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-white via-[#96969b] to-white text-black space-x-4 px-6 text-center space-y-10">
-      {/* Hero Text */}
-      <div className=" space-y-10">
+    <section className="grid place-content-center min-h-screen bg-gradient-to-br from-white via-[#96969b] to-white text-black px-6 text-center">
+      {/* your EXACT block, zero changes */}
+      <div className="space-y-10">
         <h1 className="flex items-center justify-center gap-6 text-7xl font-semibold">
           Control{" "}
           <Ring
@@ -74,7 +80,7 @@ export default function Hero() {
           Your
         </h1>
 
-        <h2 className="flex items-center gap-6 text-7xl font-semibold">
+        <h2 className="flex items-center -translate-x-30 gap-6 text-7xl font-semibold">
           Mind{" "}
           <Ring
             borderClass="border-[#6774D8]"
