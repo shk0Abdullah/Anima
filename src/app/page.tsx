@@ -1,13 +1,12 @@
 import Preloader from "@/components/Preloader";
-
+import Nav from "@/components/Nav";
+// import Hero from "@/components/modules/index/hero";
 export default function Home() {
   return (
     <>
       <Preloader />
-      <div className="min-h-screen bg-gray-50 p-8">
-        <h2 className="text-2xl font-semibold">Home screen content</h2>
-        <p>Anything you want on the home page…</p>
-      </div>
+      <Nav />
+      {/* <Hero /> */}
     </>
   );
 }
