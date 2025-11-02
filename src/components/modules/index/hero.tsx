@@ -70,7 +70,7 @@ export default function Hero() {
     <section className="grid place-content-center min-h-screen bg-gradient-to-br from-white via-[#96969b] to-white text-black px-6 text-center">
       {/* your EXACT block, zero changes */}
       <div className="space-y-10">
-        <h1 className="flex items-center justify-center gap-6 text-7xl font-semibold">
+        <h1 className="flex items-center translate-x-20 justify-center gap-6 text-7xl font-semibold">
           Control{" "}
           <Ring
             borderClass="border-[#103B1B]"
@@ -90,7 +90,7 @@ export default function Hero() {
           <span className="italic font-light">Manifest</span>
         </h2>
 
-        <h3 className="flex items-center justify-center gap-6 text-7xl font-semibold">
+        <h3 className="flex items-center translate-x-20 justify-center gap-6 text-7xl font-semibold">
           Your{" "}
           <Ring borderClass="border-[#14103B]" geo="knot" wireColor="#6c63ff" />
           Reality
