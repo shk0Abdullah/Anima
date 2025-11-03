@@ -41,9 +41,9 @@ export default function Preloader() {
         className="text-7xl font-bold tracking-wide text-center"
       >
         Welcome to&nbsp;
-        <span className="text-[#1a3501]">Anima</span>
+        <span className="text-[#050753]">ATS</span>
         <br />
-        <span className="text-[#6e3000]">The Revolution</span>
+        <span className="text-[#9e9e9e]">The Evaluator</span>
       </h1>
     </div>
   );

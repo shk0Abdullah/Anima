@@ -15,7 +15,7 @@ type RingProps = {
 const geoMap = {
   sphere: new THREE.SphereGeometry(1, 20, 16),
   torus: new THREE.TorusGeometry(1, 0.35, 16, 100),
-  knot: new THREE.CylinderGeometry(0.8, 0.8, 1, 64),
+  knot: new THREE.CylinderGeometry(5, 5, 1, 64),
 };
 
 export const Ring = ({
@@ -67,7 +67,7 @@ export const Ring = ({
 
 export default function Hero() {
   return (
-    <section className="grid place-content-center min-h-screen bg-gradient-to-br from-white via-[#96969b] to-white text-black px-6 text-center">
+    <section className="grid place-content-center min-h-screen bg-gradient-to-br from-white via-[#cdcdd1] to-white text-black px-6 text-center">
       {/* your EXACT block, zero changes */}
       <div className="space-y-10">
         <h1 className="flex items-center translate-x-20 justify-center gap-6 text-7xl font-semibold">
